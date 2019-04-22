@@ -1,0 +1,30 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+
+{
+	int wdc, lc, ub, wb, gal;
+	
+	cout << "Gallons used: ";
+	cin >> gal;
+	cout << endl;
+	
+	cout << "Unpaid balance: ";
+	cin >> ub;
+	cout << endl;
+	
+	wdc = 35; 
+	wb = 35 + (gal * 1.10);
+	lc = 20;
+	
+	if (ub > 0)
+		cout << "Water bill: Php " << wb + ub + lc;
+	else
+		cout << "Water bill: Php " << wb;
+		
+	_getch();
+	return 0;
+}
