@@ -1,0 +1,45 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+
+{
+	int A,B,C,hours;
+	char pack;
+	
+	cout << "Package purchased (A,B,C): "; 
+	cin >> pack;
+	cout << endl;
+	
+	cout << "Hours consumed: ";
+	cin >> hours;
+	cout << endl;
+	
+	A = 995; B = 1495; C = 1995;
+	
+	switch (pack)
+	{
+	case 'A':
+		if (hours <= 10)
+			cout << "Total amount due: Php " << A;
+		else
+			cout << "Total amount due: Php " << A + ((hours - 10) * 20);
+		break;
+	case 'B':
+		if (hours <= 20)
+			cout << "Total amount due: Php " << B;
+		else
+			cout << "Total amount due: Php " << B + ((hours - 20) * 10);
+		break;
+	case 'C':
+			cout << "Total amount due: Php " << C;
+		break;
+	default:
+		cout << "Please select among the three packages (A,B,C) only";
+	}
+	
+	_getch();
+	return 0;
+}
